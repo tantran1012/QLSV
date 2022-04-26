@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="loginPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.qlsv.qlsv.DangNhapController">
+   <center>
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="329.0" style="-fx-border-color: #337AB7; -fx-border-radius: 15; -fx-background-color: #ffffff; -fx-background-radius: 15; -fx-border-width: 3;" BorderPane.alignment="CENTER">
+
+         <Text fill="#337ab5" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập" textAlignment="CENTER">
+            <font>
+               <Font size="53.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Text>
+         <Label text="Tài Khoản/Mã số sinh viên">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <TextField fx:id="maSo" onKeyPressed="#onPressEnter" promptText="ex: 12345678">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </TextField>
+         <Label text="Mật Khẩu">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" top="15.0" />
+            </VBox.margin>
+         </Label>
+         <PasswordField fx:id="matKhau" onKeyPressed="#onPressEnter">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin></PasswordField>
+         <ButtonBar buttonMinWidth="120.0">
+            <buttons>
+               <Button fx:id="dangNhap" mnemonicParsing="false" onAction="#onClickLogin" onKeyPressed="#onPressEnter" text="Đăng nhập">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-success" />
+                  </styleClass></Button>
+            </buttons>
+         </ButtonBar>
+         <Label fx:id="thongBaoLoi" textFill="RED">
+            <font>
+               <Font name="System Italic" size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Label>
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

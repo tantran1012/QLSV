@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.qlsv.qlsv.ThongTinCaNhanViewController">
+   <children>
+      <AnchorPane layoutX="45.0" layoutY="40.0" prefHeight="186.0" prefWidth="420.0" style="-fx-border-color: #337AB7; -fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: white;" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <TextFlow layoutX="39.0" layoutY="39.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
+               <children>
+                  <Label text="Mã số sinh viên: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="studentID" text="mssv">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </TextFlow>
+            <TextFlow layoutX="41.0" layoutY="61.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="61.0">
+               <children>
+                  <Label text="Họ và tên: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="studentName" text="name" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children>
+            </TextFlow>
+             <Circle fill="#999999" layoutX="430.0" layoutY="90.0" radius="76.0" stroke="#999999" strokeType="INSIDE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+             <ImageView fitHeight="109.0" fitWidth="108.0" layoutX="375.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="34.0">
+                 <image>
+                     <Image url="@images/person2.png" />
+                 </image>
+             </ImageView>
+         </children></AnchorPane>
+      <Label layoutX="64.0" layoutY="26.0" style="-fx-background-color: white;" text="Thông tin cá nhân" textFill="#4757b9" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </Label>
+      <VBox layoutX="494.0" layoutY="40.0" prefHeight="186.0" prefWidth="287.0" style="-fx-border-color: #337AB7; -fx-border-radius: 20; -fx-background-color: white; -fx-background-radius: 0;" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Label text="Mật khẩu cũ">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="oldPassword">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Label text="Mật khẩu mới">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="newPassword">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Label text="Xác nhận mật khẩu">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="confirmNewPassword">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <ButtonBar>
+               <buttons>
+                  <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#onClickChangePassword" text="Đổi mật khẩu">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-success" />
+                     </styleClass></Button>
+               </buttons>
+            </ButtonBar>
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding></VBox>
+      <Label layoutX="525.0" layoutY="26.0" style="-fx-background-color: white;" text="Đổi mật khẩu" textFill="#4757b9" AnchorPane.rightAnchor="207.80000000000007" AnchorPane.topAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </Label>
+      <FlowPane fx:id="noticePane" alignment="CENTER" layoutY="305.6000061035156" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="noticeContent" alignment="CENTER" text="error" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
